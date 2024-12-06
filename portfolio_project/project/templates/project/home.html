@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torralba Andrey</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Kanit", serif;
+    ::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+ 
+.fade-up {
+    opacity: 0;  
+    animation: fadeUp 2s ease-out forwards; 
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px); 
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); 
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f7fdfa;
+    color: #000000;
+}
+h1 {
+    color: #f1ebeb;
+}
+
+h2 {
+    color: #000000;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: rgba(224, 224, 224, 0);
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(250, 6, 189, 0.904);
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.about-me {
+    margin-bottom: 20px;
+}
+
+.skills, .contact-info {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+ul li i {
+    margin-right: 10px;
+    color: #333;
+}
+
+a {
+    color: #1c76d6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background: #031d3f;
+    color: #f7efef;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(250, 6, 189, 0.904);
+}
+
+button:hover {
+    background: #010102;
+}
+
+ul li .icon {
+width: 24px;
+height: 24px;
+display: inline-block;
+border-radius: 5px;
+margin-right: 10px;
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Base Theme (Light Mode) */
+:root {
+--bg-color: #f7fdfa;
+--text-color: #000000;
+--header-bg: #333;
+--header-text: #fff;
+--container-bg: rgba(255, 255, 255, 0.8);
+--footer-bg: rgba(0, 0, 0, 0.7);
+}
+
+/* Dark Mode Variables */
+.dark-mode {
+--bg-color: #1a1a1a;
+--text-color: #fff;
+--header-bg: #000;
+--header-text: #f0f0f0;
+--container-bg: rgba(172, 45, 45, 0.9);
+--footer-bg: rgba(10, 10, 10, 0.8);
+}
+
+/* Global Styles */
+body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+margin: 0;
+padding: 0;
+background-color: var(--bg-color);
+color: var(--text-color);
+}
+
+header {
+background: var(--header-bg);
+color: var(--header-text);
+text-align: center;
+padding: 20px 0;
+}
+
+.container {
+width: 80%;
+margin: auto;
+background: var(--container-bg);
+padding: 20px;
+border-radius: 10px;
+}
+
+footer {
+background: var(--footer-bg);
+color: var(--header-text);
+text-align: center;
+padding: 10px 0;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: #031d3f;
+    color: #f7efef;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.theme-toggle:hover {
+opacity: 0.9;
+background: #010102;
+}
+</style>
+<body>
+
+    <header>
+        <h1>Torralba Andrey</h1>
+        <p>I love coding, gaming, and creating awesome things!</p>
+		<button id="theme-toggle" class="theme-toggle">Switch to Dark Mode</button>
+    </header>
+
+    <div class="container">
+        <div class="section" id="about">
+            <h2>ABOUT</h2>
+            <p id="intro">Hello! I'm Torralba Andrey, a passionate developer who enjoys learning and creating innovative solutions.</p>
+            <div id="more">
+                <p>I have a deep interest in full-stack development and love exploring new frameworks and technologies. Outside of work, you can find me gaming or diving into the world of open-source projects.</p>
+            </div>
+            <button class="btn" onclick="toggleAbout()">Read More</button>
+        </div>
+		
+        <div class="section" id="education">
+            <h2>EDUCATION</h2>
+            <p>BSIT 2nd Year - STI College Sta.maria Bulacan</p>
+        </div>
+
+        <div class="section" id="project">
+            <h2>My Project</h2>
+            <p></p>
+        </div>
+
+        <div class="section" id="skills">
+            <h2>TECHNOLOGIES</h2>
+            <ul>
+                <li><i class="fab fa-python"></i> Python</li>
+                <li><i class="fas fa-leaf"></i> Django</li>
+                <li><i class="fab fa-html5"></i> HTML</li>
+				<li><i class='fab fa-css3-alt'></i> CSS</li>
+                <li><i class="fab fa-js"></i> JavaScript</li>
+                <li><i class="fas fa-code"></i> VS Code</li>
+            </ul>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>CONTACT INFO</h2>
+            <p>Email: <a href="mailto:torralbaandrey@gmail.com">torralbaandrey@gmail.com</a></p>
+            <p>Phone: 09 +632274104</p>
+            <p>GitHub: <a href="https://github.com/torralbaandrey" target="_blank">github.com/torralbaandrey</a></p>
+			
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Torralba Andrey. All Rights Reserved.</p>
+    </footer>
+
+	<script src="js/script.js"></script>
+
+
+    <script>
+        function toggleAbout() {
+            const moreText = document.getElementById('more');
+            const button = document.querySelector('.btn');
+
+            if (moreText.style.display === 'none' || moreText.style.display === '') {
+                moreText.style.display = 'block';
+                button.textContent = 'Read Less';
+            } else {
+                moreText.style.display = 'none';
+                button.textContent = 'Read More';
+            }
+        }
+    </script>
+</body>
+</html>
